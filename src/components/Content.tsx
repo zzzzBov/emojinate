@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 
 import { emojinate } from '../emojinate'
 
+import { Copy } from './Copy'
 import { Output } from './Output'
 import { TextField } from './TextField'
 
 export const Content: React.SFC = () => {
-  const [emoji, setEmoji] = useState('')
-  const [space, setSpace] = useState('')
-  const [text, setText] = useState('')
+  const [emoji, setEmoji] = useState(':black_square:')
+  const [space, setSpace] = useState(':white_square:')
+  const [text, setText] = useState('Hello World!')
   const output = emojinate(emoji, space, text)
 
   return (
@@ -33,6 +34,10 @@ export const Content: React.SFC = () => {
       />
       <Output
         className="Content_output"
+        value={output}
+      />
+      <Copy
+        className="Content_copy"
         value={output}
       />
     </main>
