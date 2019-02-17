@@ -3,13 +3,14 @@ import React from 'react';
 export interface ITextFieldProperties {
   className: string
   label: string
-  onInput: () => void
+  onInput: (value: string) => void
   value: string
 }
 
 export const TextField: React.SFC<ITextFieldProperties> = ({
   className,
   label,
+  onInput,
   value
 }) => (
   <label
@@ -20,6 +21,7 @@ export const TextField: React.SFC<ITextFieldProperties> = ({
     </span>
     <input
       className="TextField_input"
+      onChange={(e) => onInput(e.currentTarget.value)}
       type="text"
       value={value}
       />

@@ -1,39 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react'
 
-import { Output } from './Output';
-import { TextField } from './TextField';
+import { emojinate } from '../emojinate'
 
-const onEmojiInput = () => {}
-const emoji = ""
-const onSpaceInput = () => {}
-const space = ""
-const onTextInput = () => {}
-const text = ""
-const output = ""
+import { Output } from './Output'
+import { TextField } from './TextField'
 
-export const Content = () => (
-  <main className='Content'>
-    <TextField
-      className="Content_emoji"
-      label="Emoji"
-      onInput={onEmojiInput}
-      value={emoji}
+export const Content: React.SFC = () => {
+  const [emoji, setEmoji] = useState('')
+  const [space, setSpace] = useState('')
+  const [text, setText] = useState('')
+  const output = emojinate(emoji, space, text)
+
+  return (
+    <main className='Content'>
+      <TextField
+        className="Content_emoji"
+        label="Emoji"
+        onInput={setEmoji}
+        value={emoji}
       />
-    <TextField
-      className="Content_space"
-      label="Space"
-      onInput={onSpaceInput}
-      value={space}
+      <TextField
+        className="Content_space"
+        label="Space"
+        onInput={setSpace}
+        value={space}
       />
-    <TextField
-      className="Content_text"
-      label="Text"
-      onInput={onTextInput}
-      value={text}
+      <TextField
+        className="Content_text"
+        label="Text"
+        onInput={setText}
+        value={text}
       />
-    <Output
-      className="Content_output"
-      value={output}
+      <Output
+        className="Content_output"
+        value={output}
       />
-  </main>
-);
+    </main>
+  )
+};
