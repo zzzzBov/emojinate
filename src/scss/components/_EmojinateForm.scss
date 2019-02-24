@@ -17,7 +17,7 @@
     /  1fr    1fr   ;
   }
 
-  @include media(md) {
+  @include media(lg) {
     grid-template:
       "emoji space text submit"
     /  1fr   1fr   1fr  auto  ;
