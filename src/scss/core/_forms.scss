@@ -16,25 +16,25 @@ input {
 
 button {
   background-color: $grayFC;
-  border: 0.4rem solid $blueC;
+  border: 0.2rem solid $blueA;
   border-radius: 0.4rem;
   color: $blueC;
   font-family: $mono;
   font-size: inherit;
   font-weight: bold;
   line-height: inherit;
-  padding: 1.6rem;
+  padding: 1.8rem;
 
   &:hover,
   &:focus {
     background-color: $white;
-    border-color: $blueD;
-    border-bottom-width: 0.5rem;
-    border-top-width: 0.3rem;
+    border-color: $blueB;
+    border-bottom-width: 0.3rem;
+    border-top-width: 0.1rem;
     outline: none;
   }
 
   &:active {
-    border-width: 0.4rem;
+    border-width: 0.2rem;
   }
 }
