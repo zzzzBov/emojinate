@@ -1,10 +1,14 @@
 .TextField {
   display: grid;
+  gap: 1rem;
   grid-template:
     "label"
     "input";
 
   &_label {
+    color: $gray3;
+    font-size: $d1 * 1em;
+    font-weight: bold;
     grid-area: label;
   }
 
