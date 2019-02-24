@@ -1,0 +1,49 @@
+.EmojinateForm {
+  align-items: flex-end;
+  display: grid;
+  gap: 2rem;
+  grid-column: normal;
+  grid-template:
+    "emoji "
+    "space "
+    "text  "
+    "copy  "
+    "output"
+  /  1fr   ;
+
+  @include media(sm) {
+    grid-template:
+      "emoji  space "
+      "text   copy  "
+      "output output"
+    /  1fr    1fr   ;
+  }
+
+  @include media(md) {
+    grid-template:
+      "emoji  space  text   copy  "
+      "output output output output"
+    /  1fr    1fr    1fr    auto;
+  }
+
+  &_emoji {
+    grid-area: emoji;
+  }
+
+  &_space {
+    grid-area: space;
+  }
+
+  &_text {
+    grid-area: text;
+  }
+
+  &_output {
+    grid-area: output;
+  }
+
+  &_copy {
+    grid-area: copy;
+    justify-self: flex-start;
+  }
+}

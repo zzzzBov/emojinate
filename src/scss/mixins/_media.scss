@@ -1,0 +1,22 @@
+@mixin media($from, $to: null) {
+  $min: map-get($breakpoints, $from);
+  $max: if(
+    map-has-key($breakpoints, $to),
+    map-get($breakpoints, $to) - 0.001,
+    null
+  );
+
+  @if $min and $max {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.Page {
+  display: grid;
+  grid-template:
+    "header " min-content
+    "content" 1fr
+    "footer " min-content
+  /  1fr                 ;
+  min-height: 100%;
+
+  &_header {
+    grid-area: header;
+  }
+
+  &_content {
+    align-self: flex-start;
+    grid-area: content;
+  }
+
+  &_footer {
+    grid-area: footer;
+  }
+}

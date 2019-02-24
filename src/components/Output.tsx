@@ -5,7 +5,7 @@ export interface IOutputProperties {
   value: string
 }
 
-export const Output: React.SFC<IOutputProperties> = ({
+export const Output: React.FunctionComponent<IOutputProperties> = ({
   className,
   value
 }) => (

@@ -1,7 +1,14 @@
 import React from 'react';
 
-export const Header = () => (
-  <header className='Header'>
-    <h1>Emojinate</h1>
+export interface IHeaderProps {
+  className?: string
+}
+
+export const Header: React.FunctionComponent<IHeaderProps> = ({
+  children,
+  className = ''
+}) => (
+  <header className={`Header ${className}`}>
+    {children}
   </header>
 );

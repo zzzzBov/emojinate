@@ -1,5 +1,14 @@
 import React from 'react';
 
-export const Footer = () => (
-  <footer className='Footer'></footer>
+export interface IFooterProps {
+  className?: string
+}
+
+export const Footer: React.FunctionComponent<IFooterProps> = ({
+  children,
+  className = ''
+}) => (
+  <footer className={`Footer ${className}`}>
+    {children}
+  </footer>
 );

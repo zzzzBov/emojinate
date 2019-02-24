@@ -1,0 +1,14 @@
+.TextField {
+  display: grid;
+  grid-template:
+    "label"
+    "input";
+
+  &_label {
+    grid-area: label;
+  }
+
+  &_input {
+    grid-area: input;
+  }
+}
