@@ -8,21 +8,18 @@
     "space "
     "text  "
     "copy  "
-    "output"
   /  1fr   ;
 
   @include media(sm) {
     grid-template:
       "emoji  space "
       "text   copy  "
-      "output output"
     /  1fr    1fr   ;
   }
 
   @include media(md) {
     grid-template:
       "emoji  space  text   copy  "
-      "output output output output"
     /  1fr    1fr    1fr    auto;
   }
 

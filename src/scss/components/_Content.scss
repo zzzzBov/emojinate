@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns:
     [wide-start] 2rem [normal-start] 1fr [normal-end] 2rem [wide-end];
+  padding: 2rem 0;
+  row-gap: 2rem;
 
   @include media(md, lg) {
     grid-template-columns:

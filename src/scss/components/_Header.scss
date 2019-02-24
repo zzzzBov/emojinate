@@ -1,3 +1,28 @@
 .Header {
-  
+  background-color: $blueB;
+  border-bottom: 0.2rem solid $blueE;
+  color: $white;
+  display: grid;
+  grid-template-columns:
+    [wide-start] 2rem [normal-start] 1fr [normal-end] 2rem [wide-end];
+  row-gap: 2rem;
+
+  @include media(md, lg) {
+    grid-template-columns:
+      [wide-start] 1fr [normal-start] 70rem [normal-end] 1fr [wide-end];
+  }
+
+  @include media(lg, xl) {
+    grid-template-columns:
+      [wide-start] 1fr [normal-start] 90rem [normal-end] 1fr [wide-end];
+  }
+
+  @include media(xl) {
+    grid-template-columns:
+      [wide-start] 1fr [normal-start] 110rem [normal-end] 1fr [wide-end];
+  }
+
+  > * {
+    grid-column: normal;
+  }
 }

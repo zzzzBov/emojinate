@@ -14,7 +14,8 @@ html {
 }
 
 body {
-  color: black;
+  background-color: $grayD;
+  color: $black;
   flex-grow: 1;
   flex-shrink: 0;
   font-family: $sans;
