@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: $u6 * 1em;
+}
+
+h2 {
+  font-size: $u5 * 1em;
+}
+
+h3 {
+  font-size: $u4 * 1em;
+}
+
+h4 {
+  font-size: $u3 * 1em;
+}
+
+h5 {
+  font-size: $u2 * 1em;
+}
+
+h6 {
+  font-size: $u1 * 1em;
+}
