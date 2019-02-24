@@ -1,11 +1,36 @@
 input {
   background-color: $grayFC;
   border: none;
+  border-radius: 0.4rem;
+  line-height: inherit;
   padding: 2rem;
 
   &:focus {
     background-color: $white;
     box-shadow: 0 0.2rem 0.4rem $blueB;
     outline: none;
+  }
+}
+
+button {
+  background-color: $grayFC;
+  border: 0.4rem solid $blueC;
+  border-radius: 0.4rem;
+  color: $blueC;
+  font-weight: bold;
+  line-height: inherit;
+  padding: 1.6rem;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border-color: $blueD;
+    border-bottom-width: 0.5rem;
+    border-top-width: 0.3rem;
+    outline: none;
+  }
+
+  &:active {
+    border-width: 0.4rem;
   }
 }

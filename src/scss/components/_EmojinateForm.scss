@@ -7,20 +7,20 @@
     "emoji "
     "space "
     "text  "
-    "copy  "
+    "submit"
   /  1fr   ;
 
   @include media(sm) {
     grid-template:
       "emoji  space "
-      "text   copy  "
+      "text   submit"
     /  1fr    1fr   ;
   }
 
   @include media(md) {
     grid-template:
-      "emoji  space  text   copy  "
-    /  1fr    1fr    1fr    auto;
+      "emoji space text submit"
+    /  1fr   1fr   1fr  auto  ;
   }
 
   &_emoji {
@@ -35,12 +35,7 @@
     grid-area: text;
   }
 
-  &_output {
-    grid-area: output;
-  }
-
-  &_copy {
-    grid-area: copy;
-    justify-self: flex-start;
+  &_submit {
+    grid-area: submit;
   }
 }
